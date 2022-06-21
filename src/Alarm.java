@@ -4,7 +4,6 @@ import java.util.Scanner;
 import javax.sound.sampled.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 
 public class Alarm {
     public static void timer(){
@@ -39,23 +38,13 @@ public class Alarm {
         }
     }
 
-    public static void makeSound()throws UnsupportedAudioFileException, IOException, LineUnavailableException{
-
-
-            Scanner scanner = new Scanner(System.in);
-
-            File file = new File("GD.wav");
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioStream);
-            }
 
 
 
         public static void main(String[] args) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
             timer();
             System.out.println("Alarm has been triggered sound check?");
-            makeSound();
+            Sound.makeSound();
         }
 
 }
