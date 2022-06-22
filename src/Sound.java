@@ -29,7 +29,7 @@ public class Sound {
                     break;
                 case ("T"):
                     System.out.print("Enter the second you want to skip to");
-                    int second = scanner.nextInt();
+                    int second = scanner.nextInt()*1000;
                     clip.setMicrosecondPosition(0);
                 break;
                 default: System.out.println("Not a valid response");
